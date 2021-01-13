@@ -1,0 +1,17 @@
+Refer to : https://github.com/xueliqq/v2ray-heroku/blob/master/README.md
+Cloudflare 反代加速代码:
+
+addEventListener(
+"fetch",event => {
+let url=new URL(event.request.url);
+url.hostname="这里输入您的二级域名";
+let request=new Request(url,event.request);
+event. respondWith(
+fetch(request)
+)
+}
+)
+
+优选IP程序：https://github.com/badafans/better-cloudflare-ip
+
+Youtube搜索 : 益可工作室
